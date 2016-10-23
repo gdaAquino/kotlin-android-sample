@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="k_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/k_primary</item>
+        <item name="colorPrimaryDark">@color/k_primary_dark</item>
+        <item name="colorAccent">@color/k_accent</item>
+        <item name="toolbarStyle">@style/k_toolbar</item>
+    </style>
+
+</resources>
