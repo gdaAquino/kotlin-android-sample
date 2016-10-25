@@ -2,9 +2,7 @@ package com.giaquino.kotlin.component.module
 
 import android.util.Log
 import com.giaquino.kotlin.KotlinApplication
-import com.giaquino.kotlin.model.api.adapter.EntityAdapterFactory
 import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import com.jakewharton.picasso.OkHttp3Downloader
 import com.squareup.picasso.Picasso
 import dagger.Module
@@ -23,8 +21,7 @@ import javax.inject.Singleton
 @Module class NetworkModule {
 
     @Singleton @Provides fun providesGson(): Gson {
-        return GsonBuilder().registerTypeAdapterFactory(
-            EntityAdapterFactory.create()).create()
+        return Gson()
     }
 
     @Singleton @Provides fun providesOkHttpClient(): OkHttpClient {

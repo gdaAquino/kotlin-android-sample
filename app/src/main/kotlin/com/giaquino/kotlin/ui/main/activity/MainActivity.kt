@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        KotlinApplication.component(this).inject(this)
+        KotlinApplication.graph.inject(this)
         MainActivityUI().setContentView(this)
         initialize()
     }

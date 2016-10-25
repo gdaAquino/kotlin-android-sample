@@ -19,8 +19,8 @@ class UserViewHolder(itemView: View?) : ViewHolder(itemView) {
     val avatar: ImageView = findView(UserViewHolderUI.ID_AVATAR)
 
     fun bind(user: User, picasso: Picasso) {
-        login.text = user.login()
-        picasso.load(user.avatar()).into(avatar)
+        login.text = user.login
+        picasso.load(user.avatar).into(avatar)
     }
 
     companion object {
