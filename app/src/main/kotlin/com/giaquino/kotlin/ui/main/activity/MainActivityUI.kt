@@ -16,22 +16,19 @@ class MainActivityUI : AnkoComponent<MainActivity> {
 
     override fun createView(ui: AnkoContext<MainActivity>) = with(ui) {
         verticalLayout {
-
-            /** Toolbar **/
             val toolbar = toolbar {
                 lparams {
                     width = matchParent
                 }
             }
             owner.setSupportActionBar(toolbar)
-
-            /** RecyclerView **/
             recyclerView {
                 layoutManager = LinearLayoutManager(owner, VERTICAL, false)
                 adapter = owner.adapter
-            }.lparams {
-                width = matchParent
-                height = matchParent
+                lparams {
+                    width = matchParent
+                    height = matchParent
+                }
             }
         }
     }

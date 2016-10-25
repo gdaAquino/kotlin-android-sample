@@ -21,24 +21,24 @@ class UserViewHolderUI : AnkoComponent<ViewGroup> {
         linearLayout {
             orientation = LinearLayout.HORIZONTAL
             lparams {
+                width = matchParent
+                height = wrapContent
                 padding = dip(16)
             }
-
-            /** AVATAR **/
             imageView {
                 id = ID_AVATAR
-            }.lparams {
-                width = dip(50)
-                height = dip(50)
-                rightMargin = dip(16)
+                lparams {
+                    width = dip(50)
+                    height = dip(50)
+                    rightMargin = dip(16)
+                }
             }
-
-            /** LOGIN **/
             textView {
                 id = ID_LOGIN
                 textSize = 16F
-            }.lparams {
-                gravity = Gravity.CENTER_VERTICAL
+                lparams {
+                    gravity = Gravity.CENTER_VERTICAL
+                }
             }
         }
     }

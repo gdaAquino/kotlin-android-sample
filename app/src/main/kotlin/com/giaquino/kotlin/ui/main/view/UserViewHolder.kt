@@ -9,6 +9,8 @@ import com.giaquino.kotlin.common.extension.findView
 import com.giaquino.kotlin.model.entity.User
 import com.squareup.picasso.Picasso
 import org.jetbrains.anko.AnkoContext
+import org.jetbrains.anko.browse
+import org.jetbrains.anko.onClick
 
 /**
  * @author Gian Darren Aquino
@@ -20,7 +22,10 @@ class UserViewHolder(itemView: View?) : ViewHolder(itemView) {
 
     fun bind(user: User, picasso: Picasso) {
         login.text = user.login
-        picasso.load(user.avatar).into(avatar)
+        picasso.load(user.avatar_url).into(avatar)
+        with(itemView) {
+            onClick { context.browse(user.html_url, false) }
+        }
     }
 
     companion object {
