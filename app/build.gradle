@@ -78,6 +78,9 @@ dependencies {
     /** tools **/
     compile 'io.reactivex:rxjava:1.1.6'
     compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.github.grandstaish.paperparcel:paperparcel:1.0.0'
+    compile 'com.github.grandstaish.paperparcel:paperparcel-kotlin:1.0.0'
+    kapt 'com.github.grandstaish.paperparcel:compiler:1.0.0'
 
     /** unit tests **/
     testCompile 'junit:junit:4.12'
